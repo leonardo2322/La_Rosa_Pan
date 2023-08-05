@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <title>La Rosa Pan</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Panaderia</a>
+
+        <button
+          id="shop"
+          class="btn btn-outline-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <i class="bi bi-cart3"></i>
+        </button>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav d-flex justify-content-center align-items-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#tamaño"
+                >Promociones</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#platos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer-p">contactanos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- carrito compras container -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          Tu Carrito
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="bodycanvas offcanvas-body">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col" id="tabla-carrito">
+              <table class="table" id="tableShop">
+                <thead>
+                  <tr class="table-info">
+                    <th>Producto</th>
+                    <th>contexto</th>
+                    <th>cant</th>
+                    <th>precio</th>
+                    <th>Opt</th>
+                  </tr>
+                </thead>
+                <tbody class="listaProductos" id="listaProductos"></tbody>
+              </table>
+              <div class="cantidadTotalDeLacompra">
+                <h1 class="Total">
+                  total de la compra:<input
+                    id="totalID"
+                    type="number"
+                    placeholder="0"
+                    min="0"
+                    value="0"
+                    style="border: none"
+                    width="30px"
+                  />
+                </h1>
+                <button
+                  type="button"
+                  class="addCart btn btn-primary"
+                  id="btn-Vaciar"
+                >
+                  Vaciar carrito
+                </button>
+                <a href="#" class="Send btn btn-primary" id="send"
+                  ><i class="bi bi-whatsapp"></i>Enviar compra</a
+                >
+                <div class="container mt-2">
+                  <h5 class="h5E">
+                    espefica las opciones de los productos Aca
+                  </h5>
+                  <input
+                    type="text"
+                    placeholder="introduce lo que deseas cambiar"
+                    class="inpEspecification"
+                    id="inpE"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal ubicacion -->
+    <div class="modal fade" id="ubicacion">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: #ec1f52; color: #fff"
+          >
+            <h5>ubicanos</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.722042210861!2d-75.58754108551533!3d6.1679635289061645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682529bdeaa1f%3A0xd1b0c12d18b7ed5c!2sDarysa%20Pub%20Kitchen!5e0!3m2!1ses-419!2sco!4v1669853831547!5m2!1ses-419!2sco"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+            style="background-color: #52d4e6; color: #fff"
+          >
+            <h2 style="color: #000; font-size: 18px">
+              Encuentranos en el Corozo caja de agua calle ocho Frente al famoso
+              Taller de pirella
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal menu -->
+    <div class="modal fade" id="menus">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: #cc0033; color: #fff"
+          >
+            <h5>Menu de hoy</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <video
+                    src=""
+                    autoplay
+                    controls
+                    muted
+                    width="100%"
+                    height="auto"
+                  ></video>
+                  <img
+                    src="img/Sancocho-Antioqueno-o-Paisa-Paisa-Region-Soup.jpg"
+                    alt="sancocho"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bg-light">
+            <h2 style="color: #000; font-size: 18px">
+              sancocho de res con ensalada arroz y aguacate 10% de descuento
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal horarios-->
+    <div class="modal fade" id="Horarios">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <h5>Horarios</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              class="container-fluid d-flex flex-column justify-content-center align-items-center"
+            >
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Prestamos servicio dias</th>
+                    <th>Horas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Lunes</th>
+                    <th>9:00 AM a 10:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Martes</th>
+                    <th>9:00 AM a 10:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Miercoles</th>
+                    <th>9:00 AM a 10:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Jueves</th>
+                    <th>9:00 AM a 10:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Viernes</th>
+                    <th>9:00 AM a 12:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Sabados</th>
+                    <th>9:00 AM a 12:00 PM</th>
+                  </tr>
+                  <tr>
+                    <th>Domingos</th>
+                    <th>9:00 AM a 11:00 PM</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- modal Promociones-->
+    <div class="modal fade" id="Promociones">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #afeeee">
+            <h5>Promociones</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <img src="img/promo.png" alt="promo" class="img-fluid mb-2" />
+                  <img
+                    src="img/promoburger.png"
+                    alt="promoburger"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="background-color: #e7feff">
+            <h2 style="color: #000; font-size: 18px">
+              Estas tentado a seguir mirando que viene lo mejor!
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal afiliate-->
+    <div class="modal fade" id="afiliate">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #afeeee">
+            <h5>Afiliate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <img src="img/afiliate.png" alt="afiliate" class="img-fluid" />
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- modal clientes-->
+    <div class="modal fade" id="clientes">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #afeeee">
+            <h5>clientes</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container d-flex flex-column">
+              <div class="card bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">Sara sepulveda</div>
+                <div class="card-body">
+                  <h5 class="card-title">Cliente Satisfecho</h5>
+                  <p class="card-text">
+                    me encanta el servicio domicilio son super rapidos y me
+                    llega calientico
+                  </p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              <div class="card bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">Alexander Gomez</div>
+                <div class="card-body">
+                  <h5 class="card-title">Cliente Satisfecho</h5>
+                  <p class="card-text">
+                    de verdad me gusta mucho este restaurante te atienden como
+                    en casa
+                  </p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+              </div>
+
+              <div class="card bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">luisa lopez</div>
+                <div class="card-body">
+                  <h5 class="card-title">Cliente Satisfecho</h5>
+                  <p class="card-text">
+                    estoy muy contenta con su servicio y lo recomiendo a todos
+                    un 10 de 10
+                  </p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- seccion hero -->
+
+    <section class="hero align-items-stretchs">
+      <div
+        class="hero-principal d-flex flex-column justify-content-center align-items-center"
+      >
+        <img
+          src="img/Portada.jpg"
+          alt="portada"
+          class="imagen-portada img-fluid"
+        />
+        <h1>Panaderia La Rosa Pan</h1>
+        <h2>Lo mas delicioso Que vas a provar</h2>
+      </div>
+    </section>
+    <!-- estados -->
+    <section class="estados container-fluid mt-4 mb-4" id="tamaño">
+      <div class="row">
+        <div class="col-2 test d-flex flex-column justify-content-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#ubicacion">
+            <img src="img/mapa.png" class="img-fluid" alt="imagen estados" />
+            <p>Ubicanos</p>
+          </a>
+        </div>
+        <div
+          class="col-2 test d-flex flex-column justify-content-center text-wrap"
+        >
+          <a href="#" data-bs-toggle="modal" data-bs-target="#menus">
+            <img src="img/menu.png" class="img-fluid" alt="imagen estados" />
+            <p>Menus</p>
+          </a>
+        </div>
+        <div class="col-2 test d-flex flex-column justify-content-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#Horarios">
+            <img
+              src="img/calendario.png"
+              class="img-fluid"
+              alt="imagen estados"
+            />
+            <p>Horarios</p>
+          </a>
+        </div>
+        <div class="col-2 test d-flex flex-column justify-content-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#Promociones">
+            <img
+              src="img/descuento.png"
+              class="img-fluid"
+              alt="imagen estados"
+            />
+            <p>Promociones</p>
+          </a>
+        </div>
+        <div class="col-2 test d-flex flex-column justify-content-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#afiliate">
+            <img
+              src="img/afiliado.png"
+              class="img-fluid"
+              alt="imagen estados"
+            />
+            <p>Afiliate</p>
+          </a>
+        </div>
+        <div class="col-2 test d-flex flex-column justify-content-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#clientes">
+            <img
+              src="img/realimentacion.png"
+              class="img-fluid"
+              alt="imagen estados"
+            />
+            <p>Clientes Satisfechos</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- carousel -->
+    <div class="publicidad-container">
+      <h1 class="text-publicidad">Promocion de 2x1</h1>
+    </div>
+    <div class="container">
+      <div id="carrusel-test" class="carousel slide m-5" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carrusel-test"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel-test"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel-test"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/Bandeja-Paisa.jpg"
+              class="d-block w-100"
+              alt="Bandeja-Paisa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/232-image_web.jpg"
+              class="d-block w-100"
+              alt="232-image_web.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/istockphoto-1156689466-612x612.jpg"
+              class="d-block w-100"
+              alt="istockphoto-1156689466-612x612.jpg"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrusel-test"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrusel-test"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="platosTitleCont">
+      <h1 class="platosText">Productos</h1>
+    </div>
+    <!-- Seccion de productos por pagination -->
+    <section class="container-fluid w-100">
+      <div
+        class="d-flex justify-content-center align-items-center flex-column p-3 w-100"
+        id="contenedor_productos"
+      ></div>
+      <div class="btns mb-5 mt-5">
+        <button type="button" id="anterior" class="btn btn-outline-info">Anterior</button>
+        <div class="botones-numerados" id="botones"></div>
+        <button type="button" id="siguiente" class="btn btn-outline-info">Siguiente</button>
+      </div>
+    </section>
+    <!-- footer -->
+    <section class="about-container" id="footer-p">
+      <div class="container">
+        <div class="about d-flex rectangulo justify-content-evenly">
+          <div class="row">
+            <div class="col-12 col-md-2">
+              <h1>Hablemos!</h1>
+            </div>
+            <div class="col-12 col-md-2 descripcion">
+              <h1>
+                Puedes comunicarte por nuestras redes sociales correo y demas te
+                prestaremos el mejor servicio ademas obtendras grandes
+                beneficios
+              </h1>
+            </div>
+            <div class="col-12 col-md-2">
+              <a href="mailto:joys23services@gmail.com">
+                <button type="button">
+                  Email <i class="bi bi-envelope-at-fill"></i>
+                </button>
+              </a>
+            </div>
+            <div class="col-12 col-md-2">
+              <a href="https://wa.me/+573502117928">
+                <button type="button">
+                  whatsapp <i class="bi bi-whatsapp"></i>
+                </button>
+              </a>
+            </div>
+            <div class="col-12 col-md-2">
+              <a href="https://www.facebook.com/profile.php?id=100078886285916">
+                <button type="button">
+                  facebook <i class="bi bi-facebook"></i>
+                </button>
+              </a>
+            </div>
+            <div class="col-12 col-md-2">
+              <a href="https://www.instagram.com/joys_services_23/">
+                <button type="button">
+                  Instagram <i class="bi bi-instagram"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copiryght mt-4">
+          <h2>creado por Paper Company 2022 &#169;</h2>
+        </div>
+      </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js "></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/cards.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "json/cards.json", true);
+
+        xhttp.send();
+
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            let datos = JSON.parse(this.responseText);
+            var botones = document.querySelector("#botones");
+            var pag = 1;
+            var totales = datos.length;
+            var xPag = 2;
+
+            var nPag = Math.ceil(totales / xPag);
+            var offset = (pag - 1) * xPag;
+
+            var hasta = pag * xPag;
+            mostrarLista();
+            function mostrarLista(desde, hasta) {
+              var containCards = document.querySelector(
+                "#contenedor_productos"
+              );
+              containCards.innerHTML = ""
+              for (var i = desde; i < hasta; i++) {
+                containCards.innerHTML += `<div class="card mb-3 w-100" data-id=${datos[i].id}>
+                    <div class="row">
+                      
+                        <img src="${datos[i].imagen}" class="img-fluid" id="img-cards"  alt="${datos[i].imagen}" />
+                    
+                      <div class="col">
+                        <div class="card-body">
+                          <h5 class="card-title fs-3">${datos[i].titulo}</h5>
+                          <p class="card-text">
+                            <small class="fs-5">${datos[i].precio}<span>$</span></small>
+                          </p>
+                          <a href="${datos[i].id}" class="addCart"><i class="bi bi-bag-check"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  `;
+              }
+            }
+            function quitarActivo(){
+            var losBotones = document.querySelectorAll('#botones button');
+            for(var i = 0; i < losBotones.length; i++){
+                $(losBotones[i]).removeClass('active');
+            }
+        }
+            mostrarLista(offset, hasta);
+
+            for (var i = 0; i < nPag; i++) {
+              botones.innerHTML +=
+                "<button type='button' " +
+                "class='btn btn-outline-info mt-2 mb-2 me-2'>" +
+                (i + 1) +
+                "</button>";
+            }
+            $("#botones button:first-child").addClass("active");
+            // Poner oyentes a cada botón
+            var losBotones = document.querySelectorAll("#botones button");
+            for (var i = 0; i < losBotones.length; i++) {
+              losBotones[i].addEventListener("click", function () {
+                quitarActivo();
+                var indice = parseInt(this.textContent);
+                var o = (indice - 1) * xPag;
+                var h = indice * xPag;
+                mostrarLista(o, h);
+                $(this).addClass("active");
+              });
+            }
+            $("#siguiente").on('click', function (){
+              for (var i = 0; i < losBotones.length; i++){
+                if ($(losBotones[i]).hasClass('active')){
+                  var indice = parseInt(losBotones[i].textContent);
+                }
+              }
+              var s = indice
+              var e = indice * xPag
+              console.log(e, e % 2)
+              $(losBotones[i]).addClass('active');
+              mostrarLista(s,e);
+              
+            })
+              
+            
+            
+          }
+        };
+      });
+
+      // Activar el primer botón
+    </script>
+  </body>
+</html>
