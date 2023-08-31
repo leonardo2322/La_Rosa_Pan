@@ -5,7 +5,7 @@ export const pagination = () => {
     const product = db.methods.getAll()
     const productLength = product.length
     
-    const itemsPerPage = 3;
+    const itemsPerPage = 5;
     let currentPage = 1;
 
     function showPage(pageNumber, product) {
@@ -28,7 +28,7 @@ export const pagination = () => {
                     <div class="card-description">
                         <h4 class="card-title">${item.titulo}</h4>
                         <span class="card-price">${numberToCurrency(item.precio)}</span>
-                        <span class="card-details">Lorem ipsum dolor sit amet.</span>
+                        <span class="card-details">${item.descripcion}</span>
                     </div>
                     <div class="addCart" id="addCart">
                         <i class="fa-solid fa-cart-plus addCarts" data-id="${item.id}"></i>

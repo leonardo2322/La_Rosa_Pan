@@ -1,89 +1,85 @@
 export const items = [
     {
         "id": 1,
-        "titulo": "Catalinas 1",
-        "imagen": "/assets/img/qks.jpg",
-        "precio": 3,
-        "quantity": 10
+        "titulo": "Catalinas",
+        "imagen": "/assets/img/qksjoys.jpg",
+        "precio": 2,
+        "quantity": 100,
+        "descripcion":"producto casero"
     },
     {
         "id": 2,
-        "titulo": "Pan de Molde 1",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Galletas Decoradas 10 x 1",
+        "imagen": "/assets/img/galletasDecoradas2.jpg",
+        "precio": 1,
+        "quantity": 10,
+        "descripcion":"producto casero"
 
     },
     {
         "id": 3,
-        "titulo": "Pan de Molde 1",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Tortas",
+        "imagen": "/assets/img/tortaCereza.jpg",
+        "precio": 17,
+        "quantity": 10,
+        "descripcion":"producto casero"
     },
     {
         "id": 4,
-        "titulo": "Catalinas 2",
-        "imagen": "/assets/img/qks.jpg",
-        "precio": 3,
-        "quantity": 10
+        "titulo": "Pasteles Rellenos hojaldrados de arequipe",
+        "imagen": "/assets/img/PastelitoArequipe.jpg",
+        "precio": 1.90,
+        "quantity": 10,
+        "descripcion":"producto casero"
     },
     {
         "id": 5,
-        "titulo": "Pan de Molde 2",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Pasteles Rellenos hojaldrados de guayaba",
+        "imagen": "/assets/img/Chicharron de Guayaba.jpg",
+        "precio": 1.90,
+        "quantity": 10,
+        "descripcion":"producto casero"
 
     },
     {
         "id": 6,
-        "titulo": "Pan de Molde 2",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Torta Circular",
+        "imagen": "/assets/img/TortaCircular.jpg",
+        "precio": 18,
+        "quantity": 10,
+        "descripcion":"producto casero"
     },
     {
         "id": 7,
-        "titulo": "Catalinas 3",
-        "imagen": "/assets/img/qks.jpg",
-        "precio": 3,
-        "quantity": 10
+        "titulo": "torta 2 pisos",
+        "imagen": "/assets/img/Torta2pisos.jpg",
+        "precio": 27,
+        "quantity": 10,
+        "descripcion":"producto casero"
     },
     {
         "id": 8,
-        "titulo": "Pan de Molde 3",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Croassaints",
+        "imagen": "/assets/img/crossaints.jpg",
+        "precio": 2,
+        "quantity": 10,
+        "descripcion":"producto casero"
 
     },
     {
         "id": 9,
-        "titulo": "Pan de Molde 3",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Churros de arequipe",
+        "imagen": "/assets/img/Donas.jpg",
+        "precio": 1.20,
+        "quantity": 10,
+        "descripcion":"producto casero"
     },
     {
         "id": 10,
-        "titulo": "Pan de Molde 4",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
-    },
-    {
-        "id": 11,
-        "titulo": "Pan de Molde 4",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
-    },
-    {
-        "id": 12,
-        "titulo": "Pan de Molde 4",
-        "imagen": "/assets/img/pan-molde.jpg",
-        "precio": 2.75,
-        "quantity": 10
+        "titulo": "Panderitos 3 x 1",
+        "imagen": "/assets/img/Polvorosas.jpg",
+        "precio": 1,
+        "quantity": 10,
+        "descripcion":"producto casero"
     }
 ]
