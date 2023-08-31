@@ -23,7 +23,7 @@ export const findProductModal = () => {
                 <div class="modal__content-select">
                     <h3>${product.titulo}</h3>
                     <span>${numberToCurrency(product.precio)}</span>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>${product.detalles}</p>
                 </div>
             </div>
             <div class="addCartSelect">
