@@ -27,9 +27,7 @@ export const items = [
         "titulo": "Pan de Molde 1",
         "imagen": "/assets/img/pan-molde.jpg",
         "precio": 2.75,
-        "quantity": 10,
-        "detalles": "lorem lorem lorem lorem lorem"
->>>>>>> d7d1073b475a510ee6783571a449e508bd95f673
+        "quantity": 10
 
     },
     {
@@ -76,9 +74,7 @@ export const items = [
         "titulo": "Pan de Molde 2",
         "imagen": "/assets/img/pan-molde.jpg",
         "precio": 2.75,
-        "quantity": 10,
-        "detalles": "lorem lorem lorem lorem lorem"
->>>>>>> d7d1073b475a510ee6783571a449e508bd95f673
+        "quantity": 10
 
     },
     {
@@ -125,9 +121,7 @@ export const items = [
         "titulo": "Pan de Molde 3",
         "imagen": "/assets/img/pan-molde.jpg",
         "precio": 2.75,
-        "quantity": 10,
-        "detalles": "lorem lorem lorem lorem lorem"
->>>>>>> d7d1073b475a510ee6783571a449e508bd95f673
+        "quantity": 10
 
     },
     {
@@ -174,8 +168,6 @@ export const items = [
         "titulo": "Pan de Molde 4",
         "imagen": "/assets/img/pan-molde.jpg",
         "precio": 2.75,
-        "quantity": 10,
-        "detalles": "lorem lorem lorem lorem lorem"
->>>>>>> d7d1073b475a510ee6783571a449e508bd95f673
+        "quantity": 10
     }
 ]

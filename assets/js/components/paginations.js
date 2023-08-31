@@ -28,11 +28,7 @@ export const pagination = () => {
                     <div class="card-description">
                         <h4 class="card-title">${item.titulo}</h4>
                         <span class="card-price">${numberToCurrency(item.precio)}</span>
-<<<<<<< HEAD
-                        <span class="card-details">${item.descripcion}</span>
-=======
-                        <span class="card-details">${item.detalles}</span>
->>>>>>> d7d1073b475a510ee6783571a449e508bd95f673
+                        <span class="card-details">Lorem ipsum dolor sit amet.</span>
                     </div>
                     <div class="addCart" id="addCart">
                         <i class="fa-solid fa-cart-plus addCarts" data-id="${item.id}"></i>
