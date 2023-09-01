@@ -57,5 +57,5 @@ export const renderProducts = () => {
         }
     })
 
-    window.localStorage.setItem('products', JSON.stringify(db.items))
+    // window.localStorage.setItem('products', JSON.stringify(db.items))
 }

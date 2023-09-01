@@ -189,6 +189,6 @@ export function renderCart() {
     const total = cart.methods.getTotal()
     totalContainer.innerHTML = numberToCurrency(total)
 
-    window.localStorage.setItem('products', JSON.stringify(db.items))
+    // window.localStorage.setItem('products', JSON.stringify(db.items))
     window.localStorage.setItem('cart', JSON.stringify(cart.items))
 }
